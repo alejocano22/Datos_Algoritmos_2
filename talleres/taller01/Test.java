@@ -27,13 +27,16 @@ public class Test {
 		System.out.println("DigraphAM (Matriz de Adyacencia):");
 		System.out.println("    getWeight() -> " + convert(testWeight(gMatrix)));
 		System.out.println("    getSuccesors() -> " + convert(testSuccesors(gMatrix)));
+		
+		dibujarGrafo(gMatrix);
 
 		DigraphAL gList = new DigraphAL(SIZE);
 		fillGraph(gList);
 		System.out.println("DigraphAL (Listas de Adyacencia):");
 		System.out.println("    getWeight() -> " + convert(testWeight(gList)));
 		System.out.println("    getSuccesors() -> " + convert(testSuccesors(gList)));
-
+		
+		dibujarGrafo(gList);
 		
 	}
 
@@ -109,5 +112,26 @@ public class Test {
 		return b ? "correcta" : "incorrecta";
 	}
 	
+	/**
+     * Metodo para dibujar un grafo en la herramienta:
+     * http://www.webgraphviz.com/
+     *
+     * @param g Es el grafo a dibujar
+     */
+    public static void dibujarGrafo(Digraph g) {
+        System.out.println("digraph Grafo {");
+        System.out.println("node [color=cyan, style=filled];");
+        int nv = g.size();
+        for (int i = 0; i < nv; i++) {
+            ArrayList<Integer> lista = g.getSuccessors(i);
+            if (lista != null) {
+                for (int j = 0; j < lista.size(); j++) {
+                    System.out.println("\"" + i + "\" -> \"" + lista.get(j) + "\" [ label=\"" + g.getWeight(i, lista.get(j)) + "\"];");
+                }
+            }
+
+        }
+        System.out.println("}");
+    }
 
 }
