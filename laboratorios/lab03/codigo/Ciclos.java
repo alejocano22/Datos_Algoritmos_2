@@ -8,8 +8,12 @@ package lab03;
 import java.util.ArrayList;
 
 /**
+ * Laboratorio 3. Punto 1.5. Implementacion del algoritmo que identifica si un grafo tiene ciclos.
  *
- * @author ASUS
+ * @author Alejandro Cano Munera
+ * @author Sebastian Giraldo Gomez
+ *
+ * @version Marzo 2018
  */
 public class Ciclos {
 
