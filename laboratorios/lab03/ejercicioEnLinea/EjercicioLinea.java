@@ -9,8 +9,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * Laboratorio 3. Punto 2.1. Ejercicio en línea
  *
- * @author ASUS
+ * @author Alejandro Cano Munera
+ * @author Sebastian Giraldo Gomez
+ *
+ * @version Marzo 2018
  */
 public class EjercicioLinea {
      public static void main(String[] args) {
