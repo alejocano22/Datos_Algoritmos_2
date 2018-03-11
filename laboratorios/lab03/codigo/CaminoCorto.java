@@ -7,10 +7,13 @@ package lab03;
 
 import java.util.ArrayList;
 import java.util.Stack;
-
 /**
+ * Laboratorio 3. Punto 1.6. Implementacion del algoritmo de recorrido del camino más corto.
  *
- * @author ASUS
+ * @author Alejandro Cano Munera
+ * @author Sebastian Giraldo Gomez
+ *
+ * @version Marzo 2018
  */
 public class CaminoCorto {
     public static void main(String[] args) {
